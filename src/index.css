@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Georgia", serif;
+  
+  --color-paper: #FDFCFB;
+  --color-ink: #2C2A28;
+  --color-museum-gray: #F9F7F2;
+  --color-border: #E5E0DA;
+  --color-accent: #AF8C6D;
+}
+
+@layer base {
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.artwork-card-shadow {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.modal-overlay {
+  backdrop-filter: blur(4px);
+}
+
+.cc0-badge {
+  @apply absolute bottom-3 right-3 bg-white/90 px-2 py-1 text-[10px] font-bold rounded-sm tracking-wider uppercase;
+}
